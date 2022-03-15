@@ -1,9 +1,9 @@
 
-module "webserver_1" {
+module "webserver2" {
   
-  source =  "git::https://devopstest.cobank.com/CoBank/CoBank/_git/MorpheusDev"
+  source =  "git@github.com:dgaharwar/MorpheusDev.git"
 
-  server_name   = "SGNDALMTST001"
-  server_ip     = "172.30.117.74"
+  server_name   = "DGGITSERVER"
+  server_ip     = "10.32.20.118"
 }
 
