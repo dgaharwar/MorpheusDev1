@@ -20,8 +20,8 @@ resource "vsphere_virtual_machine" "vm" {
     disk {
       label = local.disk_label
       size  = local.disk_size
-      eagerly_scrub = true
-      thin_provisioned = false
+      eagerly_scrub = false
+      thin_provisioned = true
     }
 
     clone {
@@ -29,18 +29,10 @@ resource "vsphere_virtual_machine" "vm" {
 
     customize {
 
-      windows_options {
-      computer_name = var.server_name
-      admin_password = local.admin_password
-     }
-
       network_interface {
         ipv4_address = var.server_ip
-        ipv4_netmask = local.ipv4_netmask
-        dns_server_list= local.dns_server_list
       }
 
-      ipv4_gateway = local.ipv4_gateway
     }
 
     }
