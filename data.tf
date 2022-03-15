@@ -1,19 +1,19 @@
 data "vsphere_datacenter" "dc" {
-  name = "NonProd"
+  name = "vcenter01"
 }
 data "vsphere_datastore" "datastore" {
-  name          = "vdn_ds19"
+  name          = "ESXi-DC2-DEMO-LUN03"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
 data "vsphere_host" "host" {
-  name          = "sgnthpesxcn116.na.cobank2.corp"
+  name          = "demo-dc2-esxi-04.prod.dc2.den.morpheusdata.com"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
 data "vsphere_network" "network" {
-  name          = "NPFGi-172.30.117"
+  name          = "VLAN0002 - Internal Server 2"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
 data "vsphere_virtual_machine" "template" {
-  name          = "2019_R1_Morpheus"
+  name          = "pjtest01-1"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
