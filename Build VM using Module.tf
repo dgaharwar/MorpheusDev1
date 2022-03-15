@@ -1,5 +1,5 @@
 
-module "Build VM using Module" {
+module "webserver_1" {
   
   source =  "git::https://github.com/dgaharwar/WebServer2.git"
 
