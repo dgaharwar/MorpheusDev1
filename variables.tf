@@ -1,3 +1,15 @@
+variable "vcenter_server" {
+  type        = string
+}
+
+variable "vcenter_username" {
+  type        = string
+}
+
+variable "vcenter_password" {
+  type        = string
+}
+
 variable "server_name" {
   description = "The name of the server"
   type        = string
@@ -28,3 +40,4 @@ locals {
   disk_size       = 5
   ipv4_netmask    = 24
 }
+
