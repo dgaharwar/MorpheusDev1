@@ -1,5 +1,5 @@
 data "vsphere_datacenter" "dc" {
-  name = "vcenter01"
+  name = "labs-den-dc2-demo"
 }
 data "vsphere_datastore" "datastore" {
   name          = "ESXi-DC2-DEMO-LUN03"
@@ -14,6 +14,6 @@ data "vsphere_network" "network" {
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
 data "vsphere_virtual_machine" "template" {
-  name          = "pjtest01-1"
+  name          = "pjubuntu-template"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
