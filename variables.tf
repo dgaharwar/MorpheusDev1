@@ -1,12 +1,12 @@
-variable "vcenter_server" {
+variable "vsphere_server" {
   type        = string
 }
 
-variable "vcenter_username" {
+variable "vsphere_user" {
   type        = string
 }
 
-variable "vcenter_password" {
+variable "vsphere_password" {
   type        = string
 }
 
